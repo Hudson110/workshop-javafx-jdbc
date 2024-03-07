@@ -29,14 +29,12 @@ public class MainViewController implements Initializable {
 
 	@FXML
 	public void onMenuItemSellerAction() {
-
 		System.out.println("onMenuItemSellerActtion");
 	}
 
 	@FXML
 	public void onMenuItemDepartmentAction() {
-
-		System.out.println("onMenuItemDepartmentActtion");
+		loadView("/gui/DepartmentList.fxml");
 	}
 
 	@FXML
@@ -63,7 +61,7 @@ public class MainViewController implements Initializable {
 			mainVBox.getChildren().addAll(newVBox.getChildren());
 		}
 		catch(IOException e) {
-			Alerts.showAlert("IO Exception", "Error losding", e.getMessage(), AlertType.ERROR);
+			Alerts.showAlert("IO Exception", "Error loading", e.getMessage(), AlertType.ERROR);
 		}
 	}
 }
